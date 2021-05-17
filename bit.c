@@ -6,23 +6,23 @@
 
 // 输出例子:7
 #include <stdio.h>
+int NumberOf1(int n)//判断ret二进制1的个数
+{
+	int count=0;
+	while(n)
+	{
+		n=n&(n-1);
+		count++;
+	}
+	return count;
+}
 int main()
 {
-	int a=0;
-	scanf("%d",&a);
-	int i=0;
-	//奇数位
-	printf("奇数位:");
-	for(i=31;i>=0;i-=2)
-	{
-		printf("%d ",(a>>i)&1);
-	}
-	printf("\n");
-	//偶数位
-	printf("偶数位:");
-	for(i=30;i>=1;i-=2)
-	{
-		printf("%d ",(a>>i)&1);
-	}
-	printf("\n");
+	int m=0;
+	int n=0;
+	int count =0;
+	scanf("%d %d",&m,&n);
+	int ret =m^n;
+	count = NumberOf1(ret);
+	printf("%d",count);
 }
