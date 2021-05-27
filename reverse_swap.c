@@ -1,3 +1,5 @@
+//I like Beijing.只用一个数组，标点相对位置不变
+//Beijing. like I
 #include <stdio.h>
 #include <string.h>
 void reverse(char*arr, int left, int end)
